@@ -5,73 +5,65 @@ box-sizing:border-box;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Laila', sans-serif;
 }
-
 body {
   background-image: url(css/fotoCarrito1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.contenedorTodosBotones {
-  display: flex;
-  flex-direction: column;
-}
-
-/* .contenedorTodosBotones-toppers {
-    display: flex;
-    flex-direction: column;
-} */
-
-.contenedorTodosBotones-toppers-sinElTitulo {
-    display: flex;
-    flex-direction: row;
-}
-
 .titulo-pizzeria-header {
     background-color: coral;
     text-align: center;
 }
-
-.imagenPizza    {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+a{
+    text-decoration: none;
+    color: #000;
 }
-
-.letreroPizza {
+footer{
+    background-color: var(--baltic-sea);
+}
+.footer-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/footer-banner.jpg) center/cover no-repeat;
+    padding: 3rem 0;
+}
+.footer-banner{
+    color: #fff;
+    text-align: center;
+}
+.footer-banner h2{
+    font-size: 2.4rem;
+}
+.footer-banner .btn{
+    margin-top: 2rem;
+}
+.footer-banner .btn:hover{
+    background: #fff;
+    color: var(--fire-bush);
+    background: transparent;
+}
+footer > .container{
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 500px;
-    height: 150px;
 }
-
-.iconos {
+.social-icons{
     display: flex;
-    justify-content: space-evenly;
-    margin: 5px;
+    padding: 3rem 0;
 }
-
-.shopping-cart-items {
-  padding: 20px 0px;
+.social-icons a{
+    color: greenyellow;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.25rem;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
 }
-
-.shopping-cart-header {
-  border-bottom: 1px solid #ccc;
-}
-
-.shopping-cart-image {
-  max-width: 80px;
-  border-radius: 20px;
-}
-
-.shopping-cart-quantity-input {
-  max-width: 45px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #eee;
-  padding: 5px;
-}
-
-.coloreando {
-  color: red;
+.social-icons a:hover{
+    color: #fff;
 }

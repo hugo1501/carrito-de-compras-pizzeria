@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="imagenes/favicon.jpg">
-    <title>ParaRomper26/08/22</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <title>Pizzería-La Toscana</title>
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- CSS -->
@@ -16,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Laila:wght@300&display=swap"
       rel="stylesheet"/>
+      <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
     <header>
@@ -44,21 +47,23 @@
         <tbody id="items"></tbody>
         <tfoot>
           <tr id="footer-carrito">
-            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+            <th scope="row" colspan="5">¡Carrito vacío!</th>
           </tr>
         </tfoot>
       </table>
+      <button id="myBtn" class="btn btn-success btn-lg ml-auto col-12 comprarButton" type="button" data-toggle="modal" data-target="#comprarModal">Comprar</button>
     </div>
     </div>
+    
     <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
-        <td>10</td>
-        <td>
-            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                vaciar todo
-            </button>
-        </td>
-        <td class="font-weight-bold">$ <span>5000</span></td>
+      <th scope="row" colspan="2">Total productos</th>
+      <td>10</td>
+      <td>
+        <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+          Vaciar Todo
+        </button>
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>
     </template>
     
     <template id="template-carrito">
@@ -67,30 +72,49 @@
         <td>Café</td>
         <td>1</td>
         <td>
-            <button class="btn btn-info btn-sm">
-                +
-            </button>
-            <button class="btn btn-danger btn-sm">
-                -
-            </button>
+          <button class="btn btn-info btn-sm">
+            +
+          </button>
+          <button class="btn btn-danger btn-sm">
+            -
+          </button>
         </td>
         <td>$ <span>500</span></td>
       </tr>
     </template>
-
-
-    <template id="template-productos">
+      <template id="template-productos">
         <div class="col-12 col-md-4 mb-3">
-                <div class="card">
-                    <img src="" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Pizza Básica</h5>
-                        <p class="card-text">$<span>500</span></p>
-                        <button href="#" class="comprarButton btn btn-dark">Comprar</button>
-                    </div>
-                </div>
+          <div class="card">
+              <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pizza Básica</h5>
+              <p class="card-text">$<span>500</span></p>
+              <button href="#" class="btn btn-dark">Comprar</button>
             </div>
-    </template>
+          </div>
+        </div>
+      </template>
+      <footer>
+        <div class = "container">
+          <div class = "social-icons">
+            <a href = "#">
+              <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-twitter"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-instagram"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-pinterest"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     <script src="app.js"></script>
     <script src="librerias.js"></script>
 </body>

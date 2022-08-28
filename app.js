@@ -115,3 +115,9 @@ const accionBotones = () => {
         })
     })
 }
+
+const botonComprar = document.querySelector('.comprarButton');
+    botonComprar.addEventListener('click', () => {
+        carrito = {};
+        pintarCarrito();
+    })
